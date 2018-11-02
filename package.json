@@ -2,7 +2,7 @@
   "name": "urlshortener",
   "version": "2.0.1",
   "description": "New version of the URL Shortener written in NodeJS.",
-  "main": "boot.js",
+  "main": "app.js",
   "dependencies": {
     "body-parser": "^1.18.3",
     "dotenv": "^6.1.0",
@@ -13,7 +13,7 @@
     "nodemon": "^1.18.5"
   },
   "scripts": {
-    "dev": "nodemon boot.js"
+    "dev": "nodemon app.js"
   },
   "repository": {
     "type": "git",
