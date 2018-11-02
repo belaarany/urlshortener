@@ -25,7 +25,10 @@ function BodyParser(server) {
 	let plugin = require("body-parser")
 
 	// Adding it to the Express server
-	server.use(plugin.urlencoded({ extended: false }))
+	server.use(plugin.urlencoded({
+		extended: false,
+		useNewUrlParser: true,
+	}))
 	server.use(plugin.json())
 }
 

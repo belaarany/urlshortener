@@ -3,7 +3,8 @@ const express = require("express")
 const router = express.Router()
 
 router.get('/', (req, res) => {
-    res.send('Hello world from the service provider!')
+    let controller = require("../app/Controllers/mongodbtest.js")(req, res)
+    res.send({"ok": 1})
 })
 
 module.exports = router
