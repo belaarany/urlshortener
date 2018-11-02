@@ -1,0 +1,27 @@
+{
+  "name": "urlshortener",
+  "version": "2.0.1",
+  "description": "New version of the URL Shortener written in NodeJS.",
+  "main": "boot.js",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "dotenv": "^6.1.0",
+    "express": "^4.16.4",
+    "morgan": "^1.9.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.5"
+  },
+  "scripts": {
+    "dev": "nodemon boot.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/belaarany/urlshortener.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/belaarany/urlshortener/issues"
+  },
+  "homepage": "https://github.com/belaarany/urlshortener#readme"
+}
