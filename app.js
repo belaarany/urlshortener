@@ -14,4 +14,4 @@ if (fs.existsSync("./.env") === false) {
 
 
 // Importing the booting file
-require("./boot.js")
+require("./app/boot.js")
