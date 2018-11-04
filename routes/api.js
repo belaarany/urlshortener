@@ -5,8 +5,8 @@ const router = express.Router()
 // Importing the controllers
 const UrlController = require("../app/Controllers/url.js")
 
-// Route for creating a new Url (`insert`)
-router.post("/insert", (req, res) => {
+// Route for creating a new Url
+router.post("/url", (req, res) => {
     UrlController.insert({ req })
     .then(response => {
         res.json({

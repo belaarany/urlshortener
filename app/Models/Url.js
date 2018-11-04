@@ -1,7 +1,7 @@
 // Importing Mongoose
 const mongoose = require("mongoose");
 
-// Importing the Rul schema
+// Importing the Url schema
 const UrlSchema = require("../../database/schemas/url.js")
 
 

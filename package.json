@@ -1,6 +1,6 @@
 {
   "name": "urlshortener",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "New version of the URL Shortener written in NodeJS.",
   "main": "app.js",
   "dependencies": {
@@ -8,7 +8,9 @@
     "dotenv": "^6.1.0",
     "express": "^4.16.4",
     "mongoose": "^5.3.8",
+    "mongoose-unique-validator": "^2.0.2",
     "morgan": "^1.9.1",
+    "random": "^2.0.12",
     "randomstring": "^1.1.5"
   },
   "devDependencies": {
