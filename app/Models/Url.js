@@ -1,5 +1,6 @@
 // Importing Mongoose
 const mongoose = require("mongoose");
+mongoose.set("debug", true);
 
 // Importing the Url schema
 const UrlSchema = require("../../database/schemas/url.js")
@@ -38,7 +39,7 @@ const outputManipulate = {
 }
 
 // _Find method
-UrlModel._find = () => {	
+UrlModel._find = () => {
 	return new Promise((resolve, reject) => {
 		UrlModel.aggregate([
 			outputManipulate,
@@ -49,7 +50,7 @@ UrlModel._find = () => {
 		.catch(error => {
 			reject(error)
 		})
-	})	
+	})
 }
 
 

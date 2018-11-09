@@ -37,7 +37,34 @@ module.exports = {
                 })
             }
         })
-    }
+    },
+
+
+    // Translate method
+    translate({ params }) {
+
+        console.log({params})
+
+        // TODO: szétszedni, ha shortUrl érkezett. short nagyobb prio mint a shortUrl
+    
+        return new Promise((resolve, reject) => {
+            Url.findOne({
+                short: params.short
+            },
+            {
+                _id: 0,
+                originalUrl: 1,
+            })
+            .then(result => {
+                console.log(result)
+                resolve(result)
+            })
+            .catch(error => {
+                console.log(error)
+                reject(error)
+            })
+        })
+    },
 
 }
 

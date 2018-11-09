@@ -23,5 +23,23 @@ router.post("/url", (req, res) => {
     })    
 })
 
+// Route for translating a short
+router.get("/url/translate", (req, res) => {
+    UrlController.translate({ params: req.query })
+    .then(response => {
+        res.json({
+            "ok": 1,
+            response
+        })
+    })
+    .catch(error => {
+        console.error("Something went wrong: ", error)
+        res.json({
+            "msg": "Something went wrong... check the console",
+            error,
+        })
+    }) 
+})
+
 // Exporting the router
 module.exports = router
