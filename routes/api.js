@@ -41,5 +41,15 @@ router.get("/url/translate", (req, res) => {
     }) 
 })
 
+router.get("/useragent", (req, res) => {
+    const useragent = require("useragent")
+    var agent = useragent.parse(req.headers['user-agent']);
+    console.log("\n\n\n")
+    console.log(agent.os.toJSON())
+    console.log(agent.toJSON())
+    console.log(req.connection.remoteAddress, req.ip)
+    res.send()
+})
+
 // Exporting the router
 module.exports = router
