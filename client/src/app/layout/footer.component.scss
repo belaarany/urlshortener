@@ -1,3 +1,11 @@
-.block {
-    background: #f6f6f6;
+.Footer {
+    &__container {
+        background: #e9e9e9;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        font-size: 13px;
+        color: #696969;
+        user-select: none;
+        cursor: default;
+    }
 }
