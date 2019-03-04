@@ -1,1 +1,20 @@
-/* You can add global styles to this file, and also import other style files */
+// Reset default values
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+}
+
+// Setting up default values
+html,
+body {
+    background: #fff;
+    font-family: "Roboto", sans-serif;
+}
+
+// App container
+.app-container {
+    margin-left: 10%;
+    margin-right: 10%;
+}

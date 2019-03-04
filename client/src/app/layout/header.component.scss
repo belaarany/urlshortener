@@ -1,7 +1,13 @@
-.header {
-    color: green;
-}
+.Header {
+    &__container {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        background: #f6f6f6;
+    }
 
-.block {
-    background: red;
+    &__title {
+        font-size: 27px;
+        color: #666;
+        font-weight: 300;
+    }
 }
