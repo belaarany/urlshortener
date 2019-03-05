@@ -1,5 +1,17 @@
 <div class="Shift-Editor">
   <div class="app-container">
-    <input class="Shift-Editor__input Shift-Editor__input--original" type="text" placeholder="Original URL" />
+
+    <div class="Shift-Editor__section Shift-Editor__section--original">
+      <input class="Shift-Editor__input Shift-Editor__input--original input-style" type="text" placeholder="Original URL" />
+    </div>
+
+    <div class="Shift-Editor__section Shift-Editor__section--short">
+      <div class="Shift-Editor__short-container input-style">
+        <span (click)="shortRef.focus()" class="Shift-Editor__short-prefix">https://goabela.com/u/</span>
+        <input #shortRef class="Shift-Editor__short-input" type="text" placeholder="random-short" [(ngModel)]="short" spellcheck="false" />
+      </div>
+      <button class="Shift-Editor__button button-style" (click)="generateRandomShort()">Random</button>
+    </div>
+
   </div>
 </div>
