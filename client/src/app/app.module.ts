@@ -1,12 +1,15 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './layout/header.component';
 import { FooterComponent } from './layout/footer.component';
 import { EditorComponent } from './views/home//editor/editor.component';
 import { HomeComponent } from './views/home.component';
+
+import { ShortService } from "./services/short.service"
 
 @NgModule({
   declarations: [
@@ -18,9 +21,12 @@ import { HomeComponent } from './views/home.component';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [
+    ShortService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

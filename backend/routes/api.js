@@ -41,6 +41,19 @@ router.get("/url/translate", (req, res) => {
     }) 
 })
 
+router.get("/short/generate", (req, res) => {
+    let short = "";
+    const possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+    for (let i = 0; i < 6; i++) {
+        short += possible.charAt(Math.floor(Math.random() * possible.length));
+    }
+
+    res.json({
+        short,
+    })
+})
+
 router.get("/useragent", (req, res) => {
     const useragent = require("useragent")
     var agent = useragent.parse(req.headers['user-agent']);

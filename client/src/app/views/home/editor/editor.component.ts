@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ShortService } from "../../../services/short.service"
 
 @Component({
   selector: 'short-editor',
@@ -9,28 +10,23 @@ export class EditorComponent implements OnInit {
 
   public short: any = "";
 
-  constructor() { }
+  constructor(
+    private shortService: ShortService,
+  ) { }
 
   ngOnInit() {
     this.generateRandomShort()
   }
 
   public generateRandomShort() {
-    this.short = _generatoFakeShort()
+    this.shortService.generate()
+      .subscribe((short: string) => {
+        this.short = short
+      })
   }
 
   public onPrefixClicked() {
     this.short.searchElement.nativeElement.focus()
   }
-
-}
-
-const _generatoFakeShort = () => {
-  let text = "";
-  const possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-
-  for (let i = 0; i < 6; i++)
-    text += possible.charAt(Math.floor(Math.random() * possible.length));
-
-  return text;
+  
 }
