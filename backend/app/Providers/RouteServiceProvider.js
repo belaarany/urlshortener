@@ -10,5 +10,5 @@ function Routes_API(server) {
     let routes = require("../../routes/api.js")
 
     // Adding them to the Express server
-    server.use("/api/v2/", routes)
+    server.use(["/", process.env.ROUTES_PREFIX.replace(/^\/|\/$/g, ''), "/"].join(""), routes)
 }
